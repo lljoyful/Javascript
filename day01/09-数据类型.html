@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x = 10; //x是数字型
+        console.log(x);
+        x = 'hello'; //x可以改变数据类型
+        console.log(x);
+        var num = 3.14; //数字型
+        var num1 = 011; //八进制的9，以0开头
+        console.log(num1);
+        var num3 = 0x11; //16进制的17，0X开头
+        console.log(num3);
+        // 数字型的最大值
+        console.log(Number.MAX_VALUE);
+        // 数字型的最小值
+        console.log(Number.MIN_VALUE);
+        //无穷大
+        console.log(Number.MAX_VALUE * 2);
+        //无穷小
+        console.log(-Number.MAX_VALUE * 2);
+        //非数字
+        console.log('hello' - 109);
+        //isNaN这个方法用来判断非数字，是数字返回flase，不是返回true
+        console.log('hello ' + isNaN(x) + '字');
+        console.log('0x11 ' + isNaN(num3) + '字');
+        //字符串嵌套
+        var str1 = "你好吗？‘hello’吉安吉安"
+        console.log(str1 + '\n' + "哈哈哈");
+        var str2 = '吾哩个乖乖，“say hello”';
+        console.log(str2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
