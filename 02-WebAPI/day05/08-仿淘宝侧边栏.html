@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 600px;
+            width: 45px;
+            height: 130px;
+            background-color: pink;
+        }
+        
+        .w {
+            width: 1200px;
+            margin: 10px auto;
+        }
+        
+        .header {
+            height: 150px;
+            background-color: purple;
+        }
+        
+        .banner {
+            height: 250px;
+            background-color: skyblue;
+        }
+        
+        .main {
+            height: 2000px;
+            background-color: yellowgreen;
+        }
+        
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-bar">
+        <span class="goBack">返回顶部</span>
+    </div>
+    <div class="header w">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体部分</div>
+    <script>
+        var sliderbar = document.querySelector('.slider-bar');
+        var goBack = document.querySelector('.goBack');
+        var banner = document.querySelector('.banner');
+        var header = document.querySelector('.header');
+        var main = document.querySelector('.main');
+        //页面滚动事件
+        //banner.offsetTop一定要写在外面，因为banner会向上走
+        var bannerTop = banner.offsetTop;
+        var sliderbarTop = sliderbar.offsetTop - bannerTop;
+        var mainTop = main.offsetTop;
+        document.addEventListener('scroll', function() {
+            if (window.pageYOffset >= bannerTop) {
+                sliderbar.style.position = 'fixed';
+                sliderbar.style.top = sliderbarTop + 'px';
+            } else {
+                sliderbar.style.position = 'absolute';
+                sliderbar.style.top = '300px';
+            }
+            if (window.pageYOffset >= mainTop) {
+                goBack.style.display = 'block';
+            } else {
+                goBack.style.display = 'none';
+            }
+        });
+        //当我们点击了返回顶部模块，就让窗口的页面回到最上方
+        goBack.addEventListener('click', function() {
+            // window.scroll(0, 0);
+            //窗口滚动，
+            animate(window, 0);
+        })
+
+        //目标对象 目标位置
+        function animate(obj, target, callback) {
+            // console.log(callback);调用的时候callback()
+            //解决多定时器问题,确保只有一个定时器执行
+            clearInterval(obj.setTime);
+            obj.setTime = setInterval(function() {
+                //缓动动画
+                //设置步长值,
+                // var step = (target - obj.offsetLeft) / 10;
+                //步长值应该取整，向上取整
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                //考虑到后退的的功能，应该往走远的方向取
+                var temp = target - window.pageYOffset;
+                if (temp >= 0) {
+                    var step = Math.ceil(temp / 10);
+                } else {
+                    var step = Math.floor(temp / 10);
+                }
+                // obj.style.left = window.pageYOffset + step + 'px';
+                window.scroll(0, window.pageYOffset + step);
+                //停止动画
+                if (window.pageYOffset == target) {
+                    clearInterval(obj.setTime);
+                    //回调函数写在定时器结束后
+                    if (callback) {
+                        //调用函数
+                        callback();
+                    }
+                }
+            }, 15);
+        }
+    </script>
+</body>
+
+</html>

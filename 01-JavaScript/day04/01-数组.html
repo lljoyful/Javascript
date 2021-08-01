@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr1 = new Array(); // 创建了一个空数组
+        var arr2 = []; //创建空数组
+        var arr3 = [1, 2, 3.1, 'hello', '你好', true];
+        for (var i = 0; i < arr3.length; i++) {
+            console.log('arr3[' + i + ']= ' + arr3[i]);
+        }
+        console.log(arr3.length);
+        // console.log(arr3);
+        arr3[arr3.length] = 'good';
+        console.log(arr3.length);
+        for (var i = 0; i < arr3.length; i++) {
+            console.log('arr3[' + i + ']= ' + arr3[i]);
+        }
+        arr2[2] = '2021年';
+        console.log(arr2.length);
+        for (var i = 0; i < arr2.length; i++) {
+            console.log('arr2[' + i + ']= ' + arr2[i]);
+        }
+        console.log(20, 10); // 20 10 想要输出多个变量用','隔开
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

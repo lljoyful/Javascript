@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var num = prompt('输入循环次数：');
+        // for (var i = 1; i <= num; i++) {
+        //     console.log('第' + i + '次循环');
+        // }
+        // 打印星星
+        var star = '';
+        for (var i = 1; i <= 4; i++) {
+            for (var j = 1; j <= i; j++) {
+                star += '*';
+            }
+            star += '\n';
+            // console.log(star);
+            // star = '';
+        }
+        console.log(star);
+        //1-100的和
+        /* var sum = 0,
+            sumOdd = 0, //奇数
+            sumEven = 0; //偶数
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+            if (i % 2 == 0) {
+                sumEven += i; //偶数
+            } else {
+                sumOdd += i; //奇数
+            }
+        }
+        console.log('1-100的和为：' + sum);
+        console.log('1-100的奇数和为：' + sumOdd);
+        console.log('1-100的偶数和为：' + sumEven);
+        console.log('1-100的平均值为：' + sum / 100); */
+        //学生的成绩
+        /* var sum = prompt('请输入学生的人数：');
+        var scoreSum = 0,
+            temp = 0;
+        for (var i = 1; i <= sum; i++) {
+            temp = prompt('请输入第' + i + '个学生的成绩:');
+            temp = parseInt(temp);
+            scoreSum += temp;
+            console.log(scoreSum);
+        }
+        alert(sum + '位学生的平均成绩为' + scoreSum / sum); */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        f1();
+        // console.log(a);
+        console.log(b);
+        console.log(c);
+
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        //分析
+        /* function f1() {
+            // var a = b = c = 9;相当于var a = 9;b = 9;c = 9;
+            //注意与var a=9,b=9,c=9;区分开
+            var a = 9;
+            b = 9;
+            c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        f1();
+        console.log(a);
+        console.log(b);
+        console.log(c); */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

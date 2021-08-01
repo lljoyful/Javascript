@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getNumber() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+        var num = getNumber();
+        var temp = prompt('请输入1-10之内的数字：');
+        while (num != temp) {
+            if (temp > num) {
+                temp = prompt('猜大了，继续输入：');
+            } else {
+                temp = prompt('猜小了，继续输入：');
+            }
+        }
+        alert('猜对啦，是' + num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

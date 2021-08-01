@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            /* var targetObj = {};
+            var obj = {
+                id: 1,
+                name: "andy"
+            };
+            $.extend(targetObj, obj);
+            console.log(targetObj); */
+
+
+            /* var targetObj = {
+                id: 0,
+                mas: {
+                    age: 22
+                }
+            };
+            var obj = {
+                id: 1,
+                name: "andy",
+                mas: {
+                    // sex: "男",
+                    age: 18
+                }
+            };
+            $.extend(targetObj, obj);
+            console.log(targetObj);
+            targetObj.mas.age = 20;
+            console.log(obj); */
+
+
+            var targetObj = {
+                id: 0,
+                mas: {
+                    sex: "男",
+                    age: 22
+                }
+            };
+            var obj = {
+                id: 1,
+                name: "andy",
+                mas: {
+                    age: 18
+                }
+            };
+            $.extend(true, targetObj, obj);
+            console.log(targetObj);
+            targetObj.mas.age = 20;
+            console.log(obj);
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

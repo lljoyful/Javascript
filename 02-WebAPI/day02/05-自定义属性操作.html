@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo" index="1" class="nav"></div>
+    <script>
+        var div = document.querySelector('div');
+        //获取元素属性值
+        //element.属性
+        console.log(div.id);
+        //element.getAttribute('属性名'),可以获得自定义属性
+        console.log(div.getAttribute('id'))
+        console.log(div.getAttribute('index')); //获得自定义属性index
+        //设置属性的值
+        // element.属性=‘值'    设置内置属性值。
+        div.id = 'hel';
+        div.className = 'navs';
+        console.log(div.getAttribute('id'));
+        // element.setAttribute('属性'，'值');
+        div.setAttribute('index', '2');
+        console.log(div.getAttribute('index'));
+        div.setAttribute('class', 'navss');
+        //移除属性
+        div.removeAttribute('index');
+    </script>
+</body>
+
+</html>

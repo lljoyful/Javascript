@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 输入的数字小于10，则在前边补0，比如01，09；如果大于10，不需要补，比如11
+        var num = prompt('输入一个数：');
+        if (num >= 0 && num <= 59) {
+            var result = num > 9 ? num : '0' + num;
+            alert(result);
+        } else {
+            alert('输入不符合；');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

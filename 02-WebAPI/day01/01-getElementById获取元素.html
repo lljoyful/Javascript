@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='time'>2020-2-2</div>
+    <script>
+        //1、因为文档页面自上而下加载，所以先有标签，所以script卸载标签的下面
+        //2、get获得 Element元素 By通过
+        //3、参数是大小写敏感的字符串
+        var t = document.getElementById('time');
+        console.log(t);
+        console.log(typeof t);
+        //打印我们的元素对象 更好的查看里边等额属性和方法
+        console.dir(t)
+    </script>
+</body>
+
+</html>

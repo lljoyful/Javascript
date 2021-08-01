@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用构造方法创建对象
+        function Star(uname, age, sex) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.print = function() {
+                console.log('姓名:' + this.uname + '\t年龄:' + this.age + '\t性别:' + this.sex);
+            }
+        }
+        var liu = new Star('刘德华', 18, '男');
+        liu.print();
+        var zhang = new Star('张学友', 10, '男');
+        zhang.print();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // filter 筛选数组
+        var arr = [12, 66, 4, 88, 3, 7];
+        var newArray = arr.filter(function(value, index) {
+            return value >= 20;
+        });
+        console.log(newArray);
+        var temp;
+        var bo = arr.some(function(value, index) {
+            // return value === 88;
+            // return value < 10;
+            if (value == 88) {
+                temp = index;
+                return true;
+            }
+            return 0;
+        });
+        console.log(bo);
+        console.log("第" + temp + "个元素" + arr[temp]);
+    </script>
+</body>
+
+</html>

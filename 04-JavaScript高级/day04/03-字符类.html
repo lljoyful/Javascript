@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var rg = /abc/;  只要包含abc就可以 
+        // 字符类: [] 表示有一系列字符可供选择，只要匹配其中一个就可以了
+        var rg = /[abc]/;
+        console.log(rg.test("andy"));
+        console.log(rg.test("baby"));
+        console.log(rg.test("color"));
+        console.log(rg.test("red"));
+        console.log("---------------------");
+        var reg = /^[abc]$/; //三选一，只有是a或者是b或者是c这三个字母才返回true
+        console.log(reg.test("a"));
+        console.log(reg.test("ba"));
+        console.log("---------------------");
+        var reg1 = /^[a-z]$/;
+        console.log(reg1.test("m"));
+        console.log(reg1.test("ba"));
+        console.log(reg1.test("K"));
+        console.log("---------------------");
+        var reg2 = /[a-z]/;
+        console.log(reg2.test("m"));
+        console.log(reg2.test("ba"));
+        console.log("---------------------");
+        var reg3 = /[a-zA-Z]/;
+        console.log(reg3.test("m"));
+        console.log(reg3.test("baM"));
+        console.log(reg3.test("K"));
+        console.log("---------------------");
+        var reg4 = /^[a-zA-Z_-]$/;
+        console.log(reg4.test("m"));
+        console.log(reg4.test("baM"));
+        console.log(reg4.test("K"));
+        console.log(reg4.test("_"));
+        console.log(reg4.test("-"));
+        console.log(reg4.test("aK"));
+        console.log("---------------------");
+        var reg5 = /^[^a-zA-Z_-]$/;
+        console.log(reg5.test("m"));
+        console.log(reg5.test("!"));
+        console.log(reg5.test("K"));
+        console.log(reg5.test("_"));
+        console.log(reg5.test("-"));
+        console.log(reg5.test("9"));
+    </script>
+</body>
+
+</html>

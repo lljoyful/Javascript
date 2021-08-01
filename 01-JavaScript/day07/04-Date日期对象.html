@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        console.log(date); //没有参数，返回的是系统的当前时间
+        //2.参数常用的写法 字符串写法"1970-01-01 8:8:8"  数字型：1998，10，01
+        var date1 = new Date(2021, 10, 20); //返回的是11月，不是10月
+        console.log(date1);
+        var date2 = new Date('2021-10-1 8:8:8');
+        console.log(date2);
+        var date3 = new Date();
+        console.log(date3.getFullYear()); //返回年
+        console.log(date3.getMonth() + 1); //返回月，但是小一个月
+        console.log(date3.getDate()); //日
+        console.log(date3.getDay()); //周 周日0 到周六6
+        //写一个正常格式的
+        var year = date3.getFullYear();
+        var month = date3.getMonth() + 1;
+        var day = date3.getDate();
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var d = date3.getDay();
+        console.log('今天是 ' + year + '年' + month + '月' + day + '日 ' + arr[d]);
+
+        function getTimer() {
+            var hours = date3.getHours();
+            hours = hours < 10 ? '0' + hours : hours;
+            var minutes = date3.getMinutes();
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var second = date3.getSeconds();
+            second = second < 10 ? '0' + second : second;
+            return hours + ':' + minutes + ':' + second;
+        }
+        console.log(getTimer());
+        //获取毫秒
+        console.log(date3.valueOf());
+        console.log(date3.getTime());
+        var date4 = +new Date(); //+new Date()返回的就是总的毫秒数
+        console.log(date4);
+        console.log(Date.now());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

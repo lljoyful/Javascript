@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="javascript:;">ul 1</a></li>
+        <li><a href="javascript:;">ul 2</a></li>
+        <li><a href="javascript:;">ul 3</a></li>
+        <li><a href="javascript:;">ul 4</a></li>
+        <li><a href="javascript:;">ul 5</a></li>
+    </ul>
+    <ol>
+        <li><a href="javascript:;">ol 1</a></li>
+        <li><a href="javascript:;">ol 2</a></li>
+        <li><a href="javascript:;">ol 3</a></li>
+        <li><a href="javascript:;">ol 4</a></li>
+        <li><a href="javascript:;">ol 5</a></li>
+    </ol>
+    <script>
+        $("li").on("click", "a", function() {
+            console.log(1);
+        });
+    </script>
+</body>
+
+</html>

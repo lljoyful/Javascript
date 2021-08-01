@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        $(function() {
+            var sum = 0;
+            var arr = ["red", "green", "blue"];
+            $("div").each(function(index, domEle) {
+                console.log(index);
+                console.log(domEle);
+                $(domEle).css("color", arr[index]);
+                sum += parseInt($(domEle).text());
+            });
+            console.log(sum);
+            console.log("----------------");
+            //遍历对象2
+            $.each($("div"), function(i, ele) {
+                console.log(i);
+                console.log(ele);
+            });
+            console.log("----------------");
+            $.each(arr, function(i, ele) {
+                console.log(i);
+                console.log(ele);
+            });
+            console.log("----------------");
+            $.each({
+                name: "andy",
+                age: 17
+            }, function(i, ele) {
+                console.log(i);
+                console.log(ele);
+            })
+        });
+    </script>
+</body>
+
+</html>

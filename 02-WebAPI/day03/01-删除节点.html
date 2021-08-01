@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>删除</button>
+    <ul>
+        <li>熊大</li>
+        <li>熊二</li>
+        <li>光头强</li>
+        <li>熊大2</li>
+        <li>熊二2</li>
+        <li>光头强2</li>
+        <li>熊大3</li>
+        <li>熊二3</li>
+        <li>光头3强</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+
+        var btn = document.querySelector('button');
+        //删除元素
+        ul.removeChild(ul.children[2]);
+        // console.log(ul);
+        //点击按钮依次删除里边的孩子
+        var num = 0;
+        btn.onclick = function() {
+            if (ul.children[0]) {
+                //始终删除第一个
+                ul.removeChild(ul.children[0]);
+            } else {
+                alert('没有元素可以删除了');
+                this.disabled = true; //禁用按钮
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>

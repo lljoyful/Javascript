@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = '611oxyozzoppabcoef1';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+            console.log(o);
+        }
+        var max = 0;
+        var temp;
+        for (var k in o) {
+            console.log(k + ': ' + o[k]);
+            if (max < o[k]) {
+                max = o[k];
+                temp = k;
+            }
+        }
+        console.log('出现次数最多的是：' + temp + '\n出现了' + max + '次');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

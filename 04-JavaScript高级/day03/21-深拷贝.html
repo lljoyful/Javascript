@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 深拷贝拷贝多层, 每一级别的数据都会拷贝.
+        var obj = {
+            id: 1,
+            name: 'andy',
+            msg: {
+                age: 18
+            },
+            color: ['pink', 'red']
+        };
+        var o = {};
+        // 封装函数 
+        function deepCopy(newobj, oldobj) {
+            for (var k in oldobj) {
+                // 判断我们的属性值属于那种数据类型
+                // 1. 获取属性值  oldobj[k]
+                var item = oldobj[k];
+                // 2. 判断这个值是否是数组
+                if (item instanceof Array) {
+                    //是数组，那么就先定义一个空的数组，要不然会因为没办法赋值而报错
+                    //一定要先写数组Array，因为Array也属于Object
+                    newobj[k] = [];
+                    deepCopy(newobj[k], item);
+                }
+                // 3. 判断这个值是否是对象
+                else if (item instanceof Object) {
+                    //是对象，那么就先定义一个空的对象，要不然会因为没办法赋值而报错
+                    newobj[k] = {};
+                    deepCopy(newobj[k], item);
+
+                }
+                // 4. 属于简单数据类型
+                else {
+                    newobj[k] = oldobj[k];
+                }
+            }
+        }
+        deepCopy(o, obj);
+        console.log(o);
+        o.msg.age = 22;
+        console.log(o);
+        console.log(obj);
+        // var arr = [];
+        // console.log(arr instanceof Object);
+        // o.msg.age = 20;
+        // console.log(obj);
+    </script>
+</body>
+
+</html>

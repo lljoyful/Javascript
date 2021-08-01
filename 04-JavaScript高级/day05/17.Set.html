@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Set</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const s1 = new Set();
+        console.log(s1.size);
+        const s2 = new Set(['a', 'b', 'c', 'b']);
+        console.log(s2.size);
+        console.log(s2);
+        //转化为数组
+        var ary = [...s2];
+        console.log(ary);
+        //添加值
+        s2.add(10);
+        console.log(s2);
+        //删除值
+        s2.delete('c');
+        console.log(s2);
+        //判断是否存在
+        console.log(s2.has(10));
+        //清空
+        // s2.clear();
+        // console.log(s2);
+        console.log('----------------');
+        //遍历
+        s2.forEach(val => {
+            console.log(val);
+        })
+    </script>
+</body>
+
+</html>

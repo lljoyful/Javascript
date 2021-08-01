@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li class="liactive"><span>测试1</span><span class="iconfont icon-guanbi"></span></li>
+        <li><span>测试2</span><span class="iconfont icon-guanbi"></span></li>
+        <li><span>测试3</span><span class="iconfont icon-guanbi"></span></li>
+    </ul>
+    <script>
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+        lis[1].index = 1;
+        console.log(lis[1].index);
+        console.log(lis);
+    </script>
+</body>
+
+</html>

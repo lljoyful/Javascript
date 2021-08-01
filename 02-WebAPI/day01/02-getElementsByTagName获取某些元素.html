@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久2</li>
+        <li>知否知否，应是等你好久3</li>
+        <li>知否知否，应是等你好久4</li>
+        <li>知否知否，应是等你好久5</li>
+    </ul>
+    <ul id='nav'>
+        <li>生僻字1</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ul>
+
+    <script>
+        // document.getElementsByTagName('标签名')
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        //element.getElementsByTagName('标签名')可以获得元素里面的某些标签
+        var nav = document.getElementById('nav');
+        var navLis = nav.getElementsByTagName('li');
+        console.log(navLis);
+    </script>
+</body>
+
+</html>

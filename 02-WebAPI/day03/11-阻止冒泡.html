@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 130px;
+            height: 130px;
+            background-color: pink;
+        }
+        
+        .son {
+            width: 80px;
+            height: 80px;
+            background-color: turquoise;
+        }
+        
+        div {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        //冒泡阶段 flase或者省略
+        //阻止冒泡stopPropagation ()方法
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function(e) {
+            alert('son');
+            e.stopPropagation();
+        });
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function() {
+            alert('father');
+        }, false)
+        document.addEventListener('click', function() {
+            alert('document');
+        }, false)
+    </script>
+</body>
+
+</html>

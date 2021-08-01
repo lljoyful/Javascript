@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n = prompt('输入数组的个数：');
+        n = parseInt(n);
+        var arr = [];
+        var temp;
+        for (var i = 0; i < n; i++) {
+            temp = prompt('请输入第' + (i + 1) + '个数');
+            temp = parseInt(temp);
+            arr[arr.length] = temp;
+        }
+
+        function getSum(arr) {
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            console.log(sum);
+        }
+        console.log(arr);
+        getSum(arr);
+
+        function returnFun() {
+            return 1, 2, 3;
+        }
+        console.log('return返回的是：' + returnFun());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findIndex(str, intex) {
+            var i = str.indexOf(intex, i),
+                temp = 0;
+            while (i !== -1) {
+                temp++;
+                //一定是在i+1个位置开始的，要不然会陷入死循环，一直返回第一个的位置
+                i = str.indexOf(intex, i + 1);
+            }
+            return temp;
+        }
+        var str = 'abcoefoxyozzopp';
+        console.log(findIndex(str, 'z'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

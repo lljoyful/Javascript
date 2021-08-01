@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="http://www.itcast.cn" title="都挺好">都挺好</a>
+    <input type="checkbox" name="" id="" checked>
+    <div index="1" data-index="10">我是div</div>
+    <span>123</span>
+    <script>
+        $(function() {
+            //获取属性值
+            console.log($("a").prop('href'));
+            $('a').prop('title', 'hello');
+            // console.log($('a').prop('title'));
+            $("input").change(function() {
+                console.log($(this).prop('checked'));
+            });
+            // console.log($("div").prop("index"));
+            // 自定义属性是通过attr获取的
+            console.log($("div").attr("index"));
+            $("div").attr("index", "2");
+            console.log($("div").attr("index"));
+            console.log($("div").attr("data-index"));
+            //3.数据缓存data()
+            $("span").data("uname", "andy");
+            console.log($("span").data("uname"));
+            console.log($("div").data("index"));
+        })
+    </script>
+</body>
+
+</html>

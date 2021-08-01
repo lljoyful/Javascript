@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //传统注册方式
+        /* window.onload = function() {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function() {
+                alert('点击');
+            })
+        } */
+        //新方式
+        window.addEventListener('load', function() {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function() {
+                alert('点击');
+            })
+        })
+        window.addEventListener('load', function() {
+            alert(22);
+        })
+        window.addEventListener('DOMContentLoaded', function() {
+            alert('点击33');
+        })
+    </script>
+    <button>点击</button>
+
+</body>
+
+</html>

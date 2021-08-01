@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 能被400整除的是闰年 能被4整除不能被100整除的是闰年
+        var year = prompt('请输入判断的年份');
+        year = parseInt(year);
+        if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+            alert(year + '是闰年');
+        } else {
+            alert(year + '不是闰年');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

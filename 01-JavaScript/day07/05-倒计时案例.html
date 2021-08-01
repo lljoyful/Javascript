@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function conutDown(time) {
+            var future = new Date(time);
+            var temp = future.getTime();
+            var now = new Date();
+            now = now.getTime();
+            var sur = (temp - now) / 1000; //剩余的秒数
+            var d = parseInt(sur / 60 / 60 / 24);
+            d = d < 10 ? '0' + d : d;
+            var h = Math.floor(sur / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            var m = Math.floor(sur / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            var s = Math.floor(sur % 60);
+            s = s < 10 ? '0' + s : s;
+            return '剩余' + d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+        time = prompt('输入时间：');
+        console.log(conutDown(time));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

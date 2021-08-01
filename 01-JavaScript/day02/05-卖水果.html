@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var fruit_name = prompt('请输入水果名字：');
+        var price;
+        switch (fruit_name) {
+            case '苹果':
+                price = 3.5;
+                break;
+            case '梨':
+                price = 2;
+                break;
+            case '香蕉':
+                price = 5;
+                break;
+            default:
+                price = '此处没有这种水果';
+                break;
+        }
+
+        alert(fruit_name + ':' + price + ':' + fruit_name.length);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

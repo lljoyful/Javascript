@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+            console.log(arguments); //里边存储了所有传递的实参
+            console.log('长度：' + arguments.length);
+            console.log('第二个元素：' + arguments[1]);
+        }
+        fun(12, 2, 3);
+        fun(11, 12, 13, 14, 15);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
